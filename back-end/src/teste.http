@@ -1,0 +1,12 @@
+GET http://localhost:5000/students
+
+POST http://localhost:5000/students
+Content-Type: application/json
+
+{
+  "students":[ 
+    {
+      "name": "John Doug"
+    }
+ ]
+}

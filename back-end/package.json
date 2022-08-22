@@ -11,8 +11,9 @@
     "prisma:seed": "prisma db seed",
     "dev": "nodemon src/server.ts",
     "test:docker": "yarn prisma migrate dev && yarn jest -- -i",
-    "test:old": "dotenv -e .env.test prisma migrate dev && dotenv -e .env.test cross-env NODE_OPTIONS=--experimental-vm-modules jest -- -i",
-    "start": "yarn prisma:deploy && node dist/src/server.js"
+    "test": "dotenv -e .env.test prisma migrate dev && dotenv -e .env.test cross-env NODE_OPTIONS=--experimental-vm-modules jest -- -i",
+    "start": "yarn prisma:deploy && node dist/src/server.js",
+    "start:debug": "yarn prisma:deploy && node --inspect dist/src/server.js"
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
